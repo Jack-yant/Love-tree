@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
-    <div id="app">{{msg}}</div>
+  </head>
+  <body>
+    <div id="app">
+      <div>{{msg}}</div>
+      <div>{{1 + 2}}</div>
+      <div>{{msg + '----'+ 123}}</div>
+    </div>
     <script src="./js/vue.js"></script>
     <script type="text/javascript">
-        // vue的基本使用步骤
-        //需要提供标签填充数据
-        // 引入vue.js库文件
-        // 可以使用vue的语法做基本功能
-        // 把vue提供的数据填充到标签里面
-        var vm =new Vue({
-            el:'#app',
-            data:{
-                msg:'hello Vue'
-            }
-        })
-    
+      // vue的基本使用步骤
+      //需要提供标签填充数据
+      // 引入vue.js库文件
+      // 可以使用vue的语法做基本功能
+      // 把vue提供的数据填充到标签里面
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          msg: "hello Vue"
+        }
+      });
     </script>
-</body>
+    <!-- el:元素的挂载位置(值可以为css选择器或者DOM元素)挂载也可以理解为关联 
+    data:模型数据(值是一个对象)
+{{}}:插值表达式
+将数据值填充到HTML标签里
+插值表达式支持基本的计算操作-->
+  </body>
 </html>
