@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1 v-text 填充村文本
+        2 v-html 填充HTML片段
+    3 v-pre 填充原始信息 -->
+    <div id="app">
+      <div>{{msg}}</div>
+      <div v-text>{{msg}}</div>
+      <div v-html>{{msg}}</div>
+      <div v-pre>{{msg}}</div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script type="text/javascript">
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          msg: "hello Vue"
+        }
+      });
+    </script>
+  </body>
+</html>
